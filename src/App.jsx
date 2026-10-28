@@ -1,19 +1,20 @@
 import { useState } from "react";
-import heroImg from "./assets/hero.png";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "./assets/vite.svg";
-import "./App.css";
-
 import "./App.css";
 
 function App() {
+  // STATE: Website ka current theme store karta hai.
+  // false = Light Mode, true = Dark Mode
+  const [darkMode, setDarkMode] = useState(false);
+
+  // CONDITIONAL CLASS: State ke mutabiq CSS class change hoti hai.
   return (
-    <>
+    <div className={darkMode ? "app dark-mode" : "app"}>
+      {/* NAVBAR: Logo, navigation links aur theme button */}
       <header className="navbar">
         <a href="#home" className="brand">
           ILYAS<span>.</span>
         </a>
-
+        {/* Same page ke different sections ke links */}
         <nav className="nav-links">
           <a href="#home">Home</a>
           <a href="#about">About</a>
@@ -24,8 +25,18 @@ function App() {
         <a href="#contact" className="nav-button">
           Let's Talk
         </a>
-      </header>
 
+        {/* EVENT HANDLER: Click par theme ki state toggle hoti hai */}
+        <button
+          type="button"
+          className="theme-toggle"
+          onClick={() => setDarkMode(!darkMode)}
+        >
+          {/* State ke mutabiq button ka text change hota hai */}
+          {darkMode ? "☀️ Light Mode" : "🌙 Dark Mode"}
+        </button>
+      </header>
+      {/* HERO: Website ka main introduction section */}
       <main>
         <section className="hero-section" id="home">
           <div className="hero-content">
@@ -86,6 +97,8 @@ function App() {
             to solve real-world problems.
           </p>
         </section>
+
+        {/* PROJECTS: Portfolio projects ke cards */}
 
         <section className="projects-section" id="projects">
           <p className="eyebrow">MY RECENT WORK</p>
@@ -156,7 +169,7 @@ function App() {
                 rel="noreferrer"
               >
                 View on GitHub ↗
-              </a>
+              </article>
             </article>
           </div>
         </section>
@@ -167,11 +180,12 @@ function App() {
           <p>Let's talk about websites and development projects.</p>
         </section>
       </main>
+      {/* FOOTER: Website ka copyright aur closing section */}
 
       <footer className="footer">
         © {new Date().getFullYear()} Muhammad Ilyas
       </footer>
-    </>
+    </div>
   );
 }
 

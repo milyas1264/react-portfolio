@@ -394,3 +394,74 @@ a {
     min-height: auto;
   }
 }
+/* Dark mode */
+
+.app {
+  min-height: 100vh;
+  background: #f8fafc;
+  color: #172033;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.theme-toggle {
+  padding: 10px 13px;
+  border: 1px solid #d8deea;
+  border-radius: 9px;
+  background: transparent;
+  color: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.dark-mode {
+  background: #111827;
+  color: #f3f4f6;
+}
+
+.dark-mode .navbar,
+.dark-mode .secondary-button,
+.dark-mode .floating-badge {
+  background: #1f2937;
+  color: #f3f4f6;
+}
+
+.dark-mode .hero-description,
+.dark-mode .hero-note,
+.dark-mode .section-description,
+.dark-mode .placeholder-section > p:last-child,
+.dark-mode .project-card p,
+.dark-mode .footer {
+  color: #c0c9d8;
+}
+
+.dark-mode .placeholder-section,
+.dark-mode .projects-section,
+.dark-mode .footer {
+  border-color: #374151;
+}
+
+.dark-mode .projects-section {
+  background: #111827;
+}
+
+.dark-mode .project-card {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+.dark-mode .nav-links a {
+  color: #d1d5db;
+}
+
+.dark-mode .nav-links a:hover {
+  color: #a5a0ff;
+}
+
+@media (max-width: 760px) {
+  .theme-toggle {
+    margin-left: auto;
+  }
+}
