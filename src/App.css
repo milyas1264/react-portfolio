@@ -1,3 +1,6 @@
+/* =========================
+   1. GLOBAL STYLES
+   ========================= */
 :root {
   font-family: Inter, Arial, sans-serif;
   color: #172033;
@@ -83,7 +86,9 @@ a {
   background: #5047e5;
   transform: translateY(-2px);
 }
-
+/* =========================
+3. HERO SECTION
+========================= */
 .hero-section {
   min-height: 590px;
   padding: 90px 8%;
@@ -178,7 +183,6 @@ a {
   font-family: Consolas, monospace;
   font-size: 13px;
 }
-
 .code-card p {
   margin: 12px 0;
 }
@@ -315,6 +319,9 @@ a {
   margin-top: 40px;
   text-align: left;
 }
+/* =========================
+   4. PROJECT CARDS
+   ========================= */
 
 .project-card {
   padding: 28px;
@@ -394,7 +401,9 @@ a {
     min-height: auto;
   }
 }
-/* Dark mode */
+/* =========================
+   5. DARK MODE
+   ========================= */
 
 .app {
   min-height: 100vh;
@@ -415,7 +424,6 @@ a {
   font-weight: 600;
   cursor: pointer;
 }
-
 .dark-mode {
   background: #111827;
   color: #f3f4f6;
@@ -459,7 +467,9 @@ a {
 .dark-mode .nav-links a:hover {
   color: #a5a0ff;
 }
-
+/* =========================
+   6. RESPONSIVE DESIGN
+   ========================= */
 @media (max-width: 760px) {
   .theme-toggle {
     margin-left: auto;
