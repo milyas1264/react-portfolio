@@ -87,10 +87,78 @@ function App() {
           </p>
         </section>
 
-        <section className="placeholder-section" id="projects">
+        <section className="projects-section" id="projects">
           <p className="eyebrow">MY RECENT WORK</p>
-          <h2>Projects</h2>
-          <p>My portfolio projects will be showcased here.</p>
+          <h2>Featured Projects</h2>
+          <p className="section-description">
+            Here are some projects I have built while learning frontend
+            development.
+          </p>
+
+          <div className="projects-grid">
+            <article className="project-card">
+              <div className="project-number">01</div>
+              <h3>Weather App</h3>
+              <p>
+                A weather application that presents weather information in a
+                clear and user-friendly interface.
+              </p>
+              <div className="tech-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <a
+                href="https://github.com/milyas1264"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View on GitHub ↗
+              </a>
+            </article>
+
+            <article className="project-card">
+              <div className="project-number">02</div>
+              <h3>Student Portal</h3>
+              <p>
+                A student-focused interface designed to organize information in
+                a simple and accessible layout.
+              </p>
+              <div className="tech-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <a
+                href="https://github.com/milyas1264"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View on GitHub ↗
+              </a>
+            </article>
+
+            <article className="project-card">
+              <div className="project-number">03</div>
+              <h3>Mini Web Store</h3>
+              <p>
+                A small e-commerce interface for displaying products in an
+                organized and responsive layout.
+              </p>
+              <div className="tech-tags">
+                <span>React</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <article
+                href="https://github.com/milyas1264"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View on GitHub ↗
+              </a>
+            </article>
+          </div>
         </section>
 
         <section className="placeholder-section" id="contact">
