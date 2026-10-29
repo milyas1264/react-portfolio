@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Home() {
   // Home page ka main content
   return (
@@ -17,13 +19,14 @@ function Home() {
         </p>
 
         <div className="hero-buttons">
-          <a href="/projects" className="primary-button">
+          <Link to="/projects" className="primary-button">
             View My Work ↗
-          </a>
+          </Link>
 
-          <a href="/contact" className="secondary-button">
+          {/* Contact route par bina full page reload ke jana */}
+          <Link to="/contact" className="secondary-button">
             Contact Me
-          </a>
+          </Link>
         </div>
 
         <p className="hero-note">Learning, building and growing every day.</p>

@@ -1,5 +1,11 @@
 import { useState } from "react";
 import "./App.css";
+// React state aur routing ke tools
+import { Routes, Route, Link } from "react-router-dom";
+// Hamare alag page components
+import Home from "./pages/Home";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
 
 function App() {
   // STATE: Website ka current theme store karta hai.
@@ -16,15 +22,19 @@ function App() {
         </a>
         {/* Same page ke different sections ke links */}
         <nav className="nav-links">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
+          {/* React Router links: page reload ke baghair navigation */}
+          <nav className="nav-links">
+            <Link to="/">Home</Link>
+            <Link to="/about">About</Link>
+            <Link to="/projects">Projects</Link>
+            <Link to="/contact">Contact</Link>
+          </nav>
         </nav>
 
-        <a href="#contact" className="nav-button">
+        {/* Contact page par navigate karne ke liye */}
+        <Link to="/contact" className="nav-button">
           Let's Talk
-        </a>
+        </Link>
 
         {/* EVENT HANDLER: Click par theme ki state toggle hoti hai */}
         <button
@@ -38,147 +48,25 @@ function App() {
       </header>
       {/* HERO: Website ka main introduction section */}
       <main>
-        <section className="hero-section" id="home">
-          <div className="hero-content">
-            <p className="eyebrow">FRONTEND DEVELOPER</p>
-
-            <h1>
-              Hi, I'm <span>Muhammad Ilyas.</span>
-              <br />I build for the web.
-            </h1>
-
-            <p className="hero-description">
-              I create responsive and user-friendly websites using HTML, CSS,
-              JavaScript and React. I enjoy turning ideas into clean web
-              experiences.
-            </p>
-
-            <div className="hero-buttons">
-              <a href="#projects" className="primary-button">
-                View My Work ↗
-              </a>
-
-              <a href="#contact" className="secondary-button">
-                Contact Me
-              </a>
-            </div>
-
-            <p className="hero-note">
-              Learning, building and growing every day.
-            </p>
-          </div>
-
-          <div className="hero-visual">
-            <div className="visual-circle">
-              <div className="code-card">
-                <span className="code-dots">● ● ●</span>
-                <p>const developer = {"{"}</p>
-                <p className="code-indent">
-                  name: <span>"Ilyas"</span>,
+        {/* URL ke mutabiq sahi page render hota hai */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route
+            path="/about"
+            element={
+              <section className="placeholder-section" id="about">
+                <p className="eyebrow">GET TO KNOW ME</p>
+                <h2>About Me</h2>
+                <p>
+                  I'm building my skills in frontend development and creating
+                  projects to solve real-world problems.
                 </p>
-                <p className="code-indent">
-                  skills: <span>"React"</span>,
-                </p>
-                <p className="code-indent">
-                  passion: <span>"Web"</span>
-                </p>
-                <p>{"}"}</p>
-              </div>
-              <span className="floating-badge">React Developer</span>
-            </div>
-          </div>
-        </section>
-
-        <section className="placeholder-section" id="about">
-          <p className="eyebrow">GET TO KNOW ME</p>
-          <h2>About Me</h2>
-          <p>
-            I'm building my skills in frontend development and creating projects
-            to solve real-world problems.
-          </p>
-        </section>
-
-        {/* PROJECTS: Portfolio projects ke cards */}
-
-        <section className="projects-section" id="projects">
-          <p className="eyebrow">MY RECENT WORK</p>
-          <h2>Featured Projects</h2>
-          <p className="section-description">
-            Here are some projects I have built while learning frontend
-            development.
-          </p>
-
-          <div className="projects-grid">
-            <article className="project-card">
-              <div className="project-number">01</div>
-              <h3>Weather App</h3>
-              <p>
-                A weather application that presents weather information in a
-                clear and user-friendly interface.
-              </p>
-              <div className="tech-tags">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-              </div>
-              <a
-                href="https://github.com/milyas1264"
-                target="_blank"
-                rel="noreferrer"
-              >
-                View on GitHub ↗
-              </a>
-            </article>
-
-            <article className="project-card">
-              <div className="project-number">02</div>
-              <h3>Student Portal</h3>
-              <p>
-                A student-focused interface designed to organize information in
-                a simple and accessible layout.
-              </p>
-              <div className="tech-tags">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-              </div>
-              <a
-                href="https://github.com/milyas1264"
-                target="_blank"
-                rel="noreferrer"
-              >
-                View on GitHub ↗
-              </a>
-            </article>
-
-            <article className="project-card">
-              <div className="project-number">03</div>
-              <h3>Mini Web Store</h3>
-              <p>
-                A small e-commerce interface for displaying products in an
-                organized and responsive layout.
-              </p>
-              <div className="tech-tags">
-                <span>React</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-              </div>
-              <article
-                href="https://github.com/milyas1264"
-                target="_blank"
-                rel="noreferrer"
-              >
-                View on GitHub ↗
-              </article>
-            </article>
-          </div>
-        </section>
-
-        <section className="placeholder-section" id="contact">
-          <p className="eyebrow">LET'S CONNECT</p>
-          <h2>Contact Me</h2>
-          <p>Let's talk about websites and development projects.</p>
-        </section>
+              </section>
+            }
+          />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
       </main>
       {/* FOOTER: Website ka copyright aur closing section */}
 
