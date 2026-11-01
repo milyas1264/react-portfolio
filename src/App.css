@@ -475,3 +475,28 @@ a {
     margin-left: auto;
   }
 }
+
+/* Project card links */
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.project-links a {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  background: #6c4cff;
+  color: white;
+  transition: 0.3s ease;
+}
+
+.project-links a:hover {
+  background: #5034d4;
+  transform: translateY(-3px);
+}
