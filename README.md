@@ -1,16 +1,105 @@
-# React + Vite
+# React Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive personal portfolio website built with **React.js** and **Vite** as part of my AppRo8 Frontend Development Internship – Task 2.
 
-Currently, two official plugins are available:
+The portfolio showcases my web development projects, technical skills, and contact information through a clean and user-friendly interface.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Live Demo
 
-## React Compiler
+[View My Live Portfolio](https://react-portfolio-8r3blhraq-muhammad-ilyas-projects-b6168c77.vercel.app/)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the ESLint configuration
+- Responsive design for desktop, tablet, and mobile devices
+- React component-based architecture
+- React Router navigation
+- Projects section with reusable project cards
+- Dynamic project rendering using JavaScript map()
+- Dark and Light mode toggle
+- Contact form with input validation
+- Interactive navigation and buttons
+- Modern UI with CSS hover effects
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Technologies Used
+
+- React.js
+- JavaScript (ES6+)
+- Vite
+- React Router DOM
+- HTML5
+- CSS3
+- Git & GitHub
+- Vercel
+
+## 📂 Project Structure
+
+```text
+react-portfolio/
+├── public/
+├── src/
+│   ├── assets/
+│   │   └── projects/
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── Projects.jsx
+│   │   └── Contact.jsx
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+├── index.html
+├── package.json
+└── README.md
+```
+
+## 💻 Run Locally
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/milyas1264/react-portfolio.git
+```
+
+2. Open the project folder:
+
+```bash
+cd react-portfolio
+```
+
+3. Install dependencies:
+
+```bash
+npm install
+```
+
+4. Start the development server:
+
+```bash
+npm run dev
+```
+
+5. Open the local URL shown in your terminal.
+
+## 🏗️ Production Build
+
+To create a production build:
+
+```bash
+npm run build
+```
+
+## 📸 Screenshots
+
+Project screenshots are available in the `src/assets/projects/` folder.
+
+## 👨‍💻 About Me
+
+I am a web development learner focused on building responsive and user-friendly web applications using modern frontend technologies.
+
+**GitHub:** [milyas1264](https://github.com/milyas1264)
+
+**Portfolio:** [Live Website](https://react-portfolio-8r3blhraq-muhammad-ilyas-projects-b6168c77.vercel.app/)
+
+---
+
+Built with ❤️ using React.js and Vite.
