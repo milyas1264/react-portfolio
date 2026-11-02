@@ -532,3 +532,58 @@ a {
 .project-card:hover .project-image {
   transform: scale(1.03);
 }
+
+/* Contact page */
+.contact-section {
+  width: min(90%, 650px);
+  margin: 60px auto;
+  padding: 30px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.contact-form label {
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #d5d1e5;
+  border-radius: 8px;
+  font: inherit;
+  box-sizing: border-box;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid #6c4cff;
+  border-color: #6c4cff;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.success-message {
+  color: #16803c;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .contact-section {
+    padding: 15px;
+  }
+}
