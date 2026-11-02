@@ -1,7 +1,7 @@
 import weatherImg from "../assets/projects/weather.png";
 import studentImg from "../assets/projects/student-portal.png";
 import storeImg from "../assets/projects/mini-store.png";
-import nexaImg from "../assets/projects/nexa-wave-intern.png";
+import nexaImg from "../assets/projects/Nexa-wave-intern.png";
 import apexImg from "../assets/projects/apex-ai.png";
 import multipleImg from "../assets/projects/multiple-projects.png";
 
