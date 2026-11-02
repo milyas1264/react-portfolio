@@ -1,7 +1,15 @@
+import weatherImg from "../assets/projects/weather.png";
+import studentImg from "../assets/projects/student-portal.png";
+import storeImg from "../assets/projects/mini-store.png";
+import nexaImg from "../assets/projects/nexa-wave-intern.png";
+import apexImg from "../assets/projects/apex-ai.png";
+import multipleImg from "../assets/projects/multiple-projects.png";
+
 const projects = [
   {
     id: 1,
     title: "Weather App",
+    image: weatherImg,
     description:
       "A responsive weather application that displays weather information through a clean and user-friendly interface.",
     technologies: ["HTML", "CSS", "JavaScript"],
@@ -11,6 +19,7 @@ const projects = [
   {
     id: 2,
     title: "Student Portal",
+    image: studentImg,
     description:
       "A student-focused web interface designed to organize information with a simple and responsive layout.",
     technologies: ["HTML", "CSS", "JavaScript"],
@@ -20,6 +29,7 @@ const projects = [
   {
     id: 3,
     title: "Mini Web Store",
+    image: storeImg,
     description:
       "A mini e-commerce interface featuring product cards and a responsive shopping experience.",
     technologies: ["React", "CSS", "JavaScript"],
@@ -29,17 +39,19 @@ const projects = [
 
   {
     id: 4,
-    title: "AppRo8 Landing Page",
+    title: "NexaWave Landing Page",
+    image: nexaImg,
     description:
       "A modern, responsive landing page developed as part of my Frontend Development Internship.",
     technologies: ["React", "CSS", "JavaScript"],
     github: "https://github.com/milyas1264/landing-page-project",
-    demo: "https://milyas1264.github.io/landing-page-project/",
+    demo: "https://milyas1264.github.io/NexaWave-Responsive-Landing-Page/",
   },
 
   {
     id: 5,
-    title: "Apex AI Studio",
+    title: "Apex AI Studio Landing Page",
+    image: apexImg,
     description:
       "A modern AI SaaS landing page featuring product highlights, an interactive prompt demo, testimonials and a contact section.",
     technologies: ["HTML", "CSS", "JavaScript"],
@@ -50,6 +62,7 @@ const projects = [
   {
     id: 6,
     title: "Multiple Projects Collection",
+    image: multipleImg,
     description:
       "A collection of frontend projects and coding assignments built during my learning journey with SMIT and Cisco, covering HTML, CSS and JavaScript.",
     technologies: ["HTML", "CSS", "JavaScript"],
@@ -74,6 +87,14 @@ function Projects() {
           <article className="project-card" key={project.id}>
             <div className="project-number">
               {String(project.id).padStart(2, "0")}
+              <div className="project-number">
+                {/* Project screenshot */}
+                <img
+                  src={project.image}
+                  alt={`${project.title} screenshot`}
+                  className="project-image"
+                />
+              </div>
             </div>
 
             <h3>{project.title}</h3>
