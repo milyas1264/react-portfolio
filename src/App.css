@@ -647,3 +647,24 @@ a {
   color: #f97316;
   transform: translateY(-3px);
 }
+/* profile image */
+.profile-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.profile-image {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 5px solid #f97316;
+  box-shadow: 0 0 30px rgba(249, 115, 22, 0.25);
+}
+
+.floating-badge {
+  z-index: 2;
+}

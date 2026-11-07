@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import profileImg from "../assets/profile.jpg";
 
 function Home() {
   // Home page ka main content
@@ -33,21 +34,13 @@ function Home() {
       </div>
 
       <div className="hero-visual">
-        <div className="visual-circle">
-          <div className="code-card">
-            <span className="code-dots">● ● ●</span>
-            <p>const developer = {"{"}</p>
-            <p className="code-indent">
-              name: <span>"Ilyas"</span>,
-            </p>
-            <p className="code-indent">
-              skills: <span>"React"</span>,
-            </p>
-            <p className="code-indent">
-              passion: <span>"Web"</span>
-            </p>
-            <p>{"}"}</p>
-          </div>
+        <div className="visual-circle profile-circle">
+          <img
+            src={profileImg}
+            alt="Muhammad Ilyas - Frontend Developer"
+            className="profile-image"
+          />
+
           <span className="floating-badge">React Developer</span>
         </div>
       </div>
