@@ -65,6 +65,33 @@ a {
   color: #635bff;
 }
 
+/* Header navigation hover effect */
+.nav-links a {
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Orange underline animation */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background-color: #f97316;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f97316;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
 .nav-button,
 .primary-button {
   display: inline-flex;
