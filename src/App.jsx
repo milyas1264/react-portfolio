@@ -4,6 +4,7 @@ import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
 // Hamare alag page components
 import Home from "./pages/Home";
+import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 
@@ -51,23 +52,12 @@ function App() {
         {/* URL ke mutabiq sahi page render hota hai */}
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route
-            path="/about"
-            element={
-              <section className="placeholder-section" id="about">
-                <p className="eyebrow">GET TO KNOW ME</p>
-                <h2>About Me</h2>
-                <p>
-                  I'm building my skills in frontend development and creating
-                  projects to solve real-world problems.
-                </p>
-              </section>
-            }
-          />
+          <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
+
       {/* FOOTER: Website ka copyright aur closing section */}
 
       <footer className="footer">
