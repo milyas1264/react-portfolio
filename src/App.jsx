@@ -24,12 +24,11 @@ function App() {
         {/* Same page ke different sections ke links */}
         <nav className="nav-links">
           {/* React Router links: page reload ke baghair navigation */}
-          <nav className="nav-links">
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-            <Link to="/projects">Projects</Link>
-            <Link to="/contact">Contact</Link>
-          </nav>
+
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+          <Link to="/projects">Projects</Link>
+          <Link to="/contact">Contact</Link>
         </nav>
 
         {/* Contact page par navigate karne ke liye */}

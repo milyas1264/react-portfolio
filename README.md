@@ -36,9 +36,11 @@ The portfolio includes a functional contact form powered by **EmailJS**.
 - Email Service: EmailJS
 - Email Provider: Gmail
 
-**Note:** EmailJS credentials are configured in the application. The public key is used for frontend integration.
+**Note:** EmailJS Public Key is used for frontend integration.
+Never expose private credentials or sensitive information in the repository.
 - Interactive navigation and buttons
 - Modern UI with CSS hover effects
+
 
 
 
