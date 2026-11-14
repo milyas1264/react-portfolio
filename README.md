@@ -17,8 +17,30 @@ The portfolio showcases my web development projects, technical skills, and conta
 - Dynamic project rendering using JavaScript map()
 - Dark and Light mode toggle
 - Contact form with input validation
+## Contact Form & Email Integration
+
+The portfolio includes a functional contact form powered by **EmailJS**.
+
+### Features
+- Send messages directly to the owner's Gmail inbox.
+- EmailJS integration for email delivery.
+- Name validation (2–50 characters).
+- Email validation (maximum 100 characters).
+- Message validation (10–1000 characters).
+- Character counter for message length.
+- Loading state while sending emails.
+- Success and error notifications.
+- Automatic form reset after successful submission.
+
+### Email Integration
+- Email Service: EmailJS
+- Email Provider: Gmail
+
+**Note:** EmailJS credentials are configured in the application. The public key is used for frontend integration.
 - Interactive navigation and buttons
 - Modern UI with CSS hover effects
+
+
 
 ## 🛠️ Technologies Used
 

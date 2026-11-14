@@ -1,17 +1,16 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 function Contact() {
-  // Form ke input fields ka data
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
 
-  // Successful validation ka status
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  // Input change hone par state update
   function handleChange(e) {
     const { name, value } = e.target;
 
@@ -20,17 +19,43 @@ function Contact() {
       [name]: value,
     });
 
-    setSubmitted(false);
+    setStatus("");
   }
 
-  // Form submit hone par
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
 
-    setSubmitted(true);
+    setLoading(true);
+    setStatus("");
 
-    // Filhal form data console mein check karenge
-    console.log("Form Data:", formData);
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      subject: "New message from portfolio",
+      message: formData.message,
+    };
+
+    try {
+      await emailjs.send(
+        "service_r221qkn",
+        "template_amwud4c",
+        templateParams,
+        "Ly3OYRpcODxLPSQ7D",
+      );
+
+      setStatus("success");
+
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      setStatus("error");
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -44,7 +69,6 @@ function Contact() {
       </p>
 
       <form className="contact-form" onSubmit={handleSubmit}>
-        {/* Name field */}
         <label htmlFor="name">Your Name</label>
         <input
           type="text"
@@ -54,9 +78,10 @@ function Contact() {
           value={formData.name}
           onChange={handleChange}
           required
+          minLength={3}
+          maxLength={50}
         />
 
-        {/* Email field */}
         <label htmlFor="email">Your Email</label>
         <input
           type="email"
@@ -66,9 +91,9 @@ function Contact() {
           value={formData.email}
           onChange={handleChange}
           required
+          maxLength={50}
         />
 
-        {/* Message field */}
         <label htmlFor="message">Your Message</label>
         <textarea
           id="message"
@@ -78,17 +103,26 @@ function Contact() {
           onChange={handleChange}
           rows="5"
           required
-          minLength="10"
+          minLength={10}
+          maxLength={1000}
         />
+        <p className="character-count">
+          {formData.message.length}/1000 characters
+        </p>
 
-        <button type="submit" className="primary-button">
-          Submit Message ↗
+        <button type="submit" className="primary-button" disabled={loading}>
+          {loading ? "Sending..." : "Submit Message ↗"}
         </button>
 
-        {/* Success message */}
-        {submitted && (
+        {status === "success" && (
           <p className="success-message">
-            Your form passed validation successfully!
+            Your message has been sent successfully!
+          </p>
+        )}
+
+        {status === "error" && (
+          <p className="error-message">
+            Something went wrong. Please try again.
           </p>
         )}
       </form>
